@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure>
+	<New id="configLocation" class="org.eclipse.jetty.plus.jndi.EnvEntry">
+		<Arg>configLocation</Arg>
+		<Arg type="java.lang.String">file:src/test/resources/config-integration-test.properties
+		</Arg>
+		<Arg type="boolean">true</Arg>
+	</New>
+	<New id="logbackFileLocation" class="org.eclipse.jetty.plus.jndi.EnvEntry">
+		<Arg>logbackFileLocation</Arg>
+		<Arg type="java.lang.String">src/test/resources/logback-fragment-integration-test.xml
+		</Arg>
+		<Arg type="boolean">true</Arg>
+	</New>
+
+	<New id="walletDS" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg></Arg>
+		<Arg>jdbc/wallet</Arg>
+		<Arg>
+			<New class="org.apache.commons.dbcp.BasicDataSource">
+				<Set name="driverClassName">net.sf.log4jdbc.DriverSpy</Set>
+				<Set name="url">jdbc:log4jdbc:oracle:thin:@10.65.193.12:1521:whpay
+				</Set>
+				<Set name="username">walletuser</Set>
+				<Set name="password">walletuser</Set>
+				<Set name="validationQuery">select 1 from dual</Set>
+			</New>
+		</Arg>
+	</New>
+
+</Configure>

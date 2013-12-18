@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NDC</title>
+<meta name="layout" content="decorator_default" />
+
+</head>
+<body class="home">
+<!-- Home -->
+<div data-role="page" id="home">
+ <div data-role="header">
+            <h1><I>NDC</I></h1>
+        </div><!-- /header -->
+
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a" style="width: 100%; ">
+				<img
+					src="/img/jiti_small.png" style="width: 100%;" />
+			</div>
+		</div>
+
+
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true">
+					<#if user??>
+
+					<li><a rel="external" href="info"><i
+							class="icon-football"></i>会员信息</a></li> <#else>
+					<li><a rel="external" href="login"><i class="icon-doc"></i>会员登录</a></li>
+					<li><a rel="external" href="sign"><i class="icon-calendar"></i>会员注册</a></li>
+					</#if>
+					<li><a href="#contact"><i class=""></i>联系我们</a></li>
+				</ul>
+				<#if user??>
+				<ul data-role="listview" data-inset="true">
+					<li><a rel="external" href="logout"><i class="icon-doc"></i>安全退出</a></li>
+					<!-- <li data-theme="e"><a href=""><i class="icon-desktop"></i> Full Site</a> </li> -->
+				</ul>
+				</#if>
+
+			</div>
+			<!-- end content -->
+			<div data-theme="d" data-role="footer" style="text-align: center;">
+	
+          			 &copy; 2013 NDC
+
+			</div><!-- /footer -->
+
+		</div>
+		<!-- end page --> 
+
+
+
+<!-- Contact -->
+<div data-role="page" id="contact">
+  <div data-role="header">
+    <h1>Contact</h1>
+   <!--  <a href="./" data-icon="back" data-iconpos="left" data-direction="reverse" class="ui-btn-right">Back</a>
+   -->
+    </div>
+  
+   <!-- /header -->
+  <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+      <li><a href="mailto:290008284@qq.com" rel="external">290008284@qq.com</a></li>
+      </ul>
+      <a  data-role="button" href="#home" data-icon="arrow-l"  data-iconpos="left" data-direction="reverse" >Back</a> 
+      
+    
+  </div>
+  <!-- /content --> 
+</div>
+<!-- /page --> 
+
+
+</body>
+</html>

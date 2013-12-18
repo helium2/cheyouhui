@@ -1,0 +1,36 @@
+label.error { 
+	float: left; 
+	color: red; 
+	padding-top: .5em; 
+	vertical-align: top; 
+	font-weight:bold
+}
+
+
+.home_logo {
+    display: inline-block;
+    height: 21px;
+    margin-right: 10px;
+
+    width: 21px;
+}
+
+.home_about {
+    background: url("../img/about.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.home_login {
+    background: url("../img/login.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.home_sign {
+    background: url("../img/sign.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.home_logout {
+    background: url("../img/logout.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.home_info {
+    background: url("../img/info.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}

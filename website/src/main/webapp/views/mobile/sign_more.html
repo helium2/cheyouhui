@@ -1,0 +1,354 @@
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]/>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NDC</title>
+<meta name="layout" content="decorator_default" />
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js" ></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages_zh.js"></script>
+
+
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page2">
+    <div data-theme="a" data-role="header">
+        <h3>
+            个人信息完善
+        </h3>
+    </div>
+    <div data-role="content">
+        <form id="sign_more" >
+
+            <div data-role="fieldcontain">
+                <label for="realname">
+                    姓名
+                </label>
+                <input name="realname" id="realname" placeholder="" value="" type="text" maxlength=10>
+            </div>
+            <div id="gender" data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>
+                        性别
+                    </legend>
+                    <input id="radio1" name="gender" value="male" type="radio">
+                    <label for="radio1">
+                        男
+                    </label>
+                    <input id="radio2" name="gender" value="female" type="radio">
+                    <label for="radio2">
+                        女
+                    </label>
+                    <input id="radio3" name="gender" value="privacy" type="radio" checked="checked">
+                    <label for="radio3">
+                        保密
+                    </label>
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="job">
+                    职业
+                </label>
+                <input name="job" id="job" placeholder="" value="" type="text" maxlength=20>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="qq">
+                    QQ号
+                </label>
+                <input name="qq" id="qq" placeholder="" value="" type="tel" maxlength=20>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="email">
+                    邮箱
+                </label>
+                <input name="email" id="email" placeholder="" value="" type="email"  maxlength=40>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="currentcartype">
+                    驾驶车型
+                </label>
+                <input name="currentcartype" id="currentcartype" placeholder="" value=""
+                type="text"  maxlength=20>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="licensePlate">
+                    车牌号
+                </label>
+                <input name="licensePlate" id="licensePlate" placeholder="苏A88888" value=""
+                type="text"  maxlength=20>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="dreamcartype">
+                    意向车型
+                </label>
+                <input name="dreamcartype" id="dreamcartype" placeholder="" value=""
+                type="text"  maxlength=20>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="referee">
+                    推荐人手机号
+                </label>
+                <input name="referee" id="referee" placeholder="" value="" type="tel"  maxlength=20>
+            </div>
+            <!--  
+            <div data-role="fieldcontain">
+                <label for="hobby">
+                    爱好
+                </label>
+                <textarea name="hobby" id="hobby" placeholder=""></textarea>
+            </div>
+            -->
+            <div id="hobby" data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>
+                        爱好(多选)
+                    </legend>
+                    <input id="checkbox1" name="hobby" type="checkbox" value="汽车">
+                    <label for="checkbox1">
+                        汽车
+                    </label>
+                    <input id="checkbox2" name="hobby" type="checkbox" value="美食"'>
+                    <label for="checkbox2">
+                        美食
+                    </label>
+                    <input id="checkbox3" name="hobby" type="checkbox" value="电影">
+                    <label for="checkbox3">
+                        电影
+                    </label>
+                    <input id="checkbox4" name="hobby" type="checkbox" value="音乐">
+                    <label for="checkbox4">
+                        音乐
+                    </label>
+                    <input id="checkbox5" name="hobby" type="checkbox" value="唱K">
+                    <label for="checkbox5">
+                        唱K
+                    </label>
+                    <input id="checkbox6" name="hobby" type="checkbox" value="运动">
+                    <label for="checkbox6">
+                        运动
+                    </label>
+					<input id="checkbox7" name="hobby" type="checkbox" value="旅游">
+                    <label for="checkbox7">
+                        旅游
+                    </label>
+                    <input id="checkbox8" name="hobby" type="checkbox" value="摄影">
+                    <label for="checkbox8">
+                        摄影
+                    </label>
+                    <input id="checkbox9" name="hobby" type="checkbox" value="棋牌">
+                    <label for="checkbox9">
+                        棋牌
+                    </label>
+                    <input id="checkbox10" name="hobby" type="checkbox"  value="看书">
+                    <label for="checkbox10">
+                        看书
+                    </label>
+                    <input id="checkbox11" name="hobby" type="checkbox" value="自驾游">
+                    <label for="checkbox11">
+                        自驾游
+                    </label>
+                    <input id="checkbox12" name="hobby" type="checkbox" value="网游">
+                    <label for="checkbox12">
+                        网游
+                    </label>
+                    
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="ndcId1">
+                    车标号第一位
+                </label>
+                <select id="ndcId1" name="ndcId1">
+                  <option value="0">
+                        0
+                    </option>
+                    <option value="1">
+                       1
+                    </option>
+                    <option value="2">
+                        2
+                    </option>
+                    <option value="3">
+                       3
+                    </option>
+                    <option value="5">
+                       5
+                    </option>
+                    <option value="6">
+                        6
+                    </option>
+                    <option value="7">
+                       7
+                    </option>
+                    <option value="8">
+                        8
+                    </option>
+                      <option value="9">
+                        9
+                    </option>
+                    
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="ndcId2">
+                    完整车标号
+                </label>
+                <select id="ndcId2" name="ndcid" >
+                    
+                </select>
+            </div>
+            <fieldset class="ui-grid-a" style="margin-top:15px;">
+					<div class="ui-block-a">
+						<a id="Cancle" rel="external" data-role="button" data-inline="false"
+							data-direction="reverse" data-transition="slidefade"
+							href="/mobile/sign" data-icon="arrow-l" data-iconpos="left">
+							上一步 </a>
+					</div>
+					<div id="submit_but" class="ui-block-b">
+						<input type="submit" data-inline="false" data-icon="arrow-r"
+							data-theme="a" data-iconpos="right" value="提交">
+					</div>
+				</fieldset>
+            
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+ 	$("#ndcId1").change(function() {
+ 		var ndcid1 =  $(this);
+ 		//alert($ndcid1);
+ 		$.ajax({
+ 			url:"<@c.url value='/mobile/sign_getndclist'/>",
+ 			dataType:"json",
+ 			type:"GET",
+ 			data: {start:ndcid1.val()},
+ 			success: function(result){
+ 				if(result != null && result.success == true) {
+ 					var list = result.message;
+ 					$("#ndcId2").children().remove();
+ 					for(var i=0;i<list.length;i++) {
+ 						if(i == 0) {
+ 							$("#ndcId2").append("<option selected='selected' value='" + list[i] + "'>" + list[i] +"</option>");
+ 						} else {
+ 							$("#ndcId2").append("<option value='" + list[i] + "'>" + list[i] +"</option>");
+ 						}
+ 					}
+ 					$("#ndcId2").selectmenu('refresh', true)
+ 				} else {
+ 					alert("请求错误！");
+ 				}
+ 				
+ 			}
+ 		});
+ 	});
+
+		$('#page2').bind('pageinit', function(event) {
+			$("#ndcId1").change();
+			
+			jQuery.validator.addMethod("isMobile", function(value, element) {
+				var tel = /^1\d{10}$/;
+				return this.optional(element) || (tel.test(value));
+			});
+			
+			jQuery.validator.addMethod("isLicensePlate", function(value, element) {
+				var exp = /^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{5}$/;
+				return this.optional(element) || (exp.test(value));
+			});
+			
+			
+			$('#sign_more').validate({
+				onkeyup: false,
+				onfocusout : function(element) {
+					$(element).valid();
+				},
+				rules : {
+					realname : {
+						required : true
+					},
+					job : {
+						required : true
+					},
+					qq: {
+						digits: true
+					},
+					email: {
+						email:true
+					},
+					currentcartype: {
+						required : true
+					},
+					licensePlate :{
+						required : true,
+						isLicensePlate: true
+					},
+					ndcid: {
+						required : true
+					},
+					referee: {
+						isMobile: true,
+						remote: {
+	                		url: 'sign_check_exist',
+	                		type:'post',
+	                		data: {
+	                			mobile: function() { return $("#referee").val();}
+	                		},   
+	                		dataFilter: function(data) {
+	                	    	var json = jQuery.parseJSON(data);
+	                   	  		if(typeof json == "boolean") {
+	                        		return data;
+	                    		}
+	                    		return "\"" + data + "\"";
+	                		}                     	
+	                	} 
+					}
+				},
+				messages:{
+					referee :{ 
+						isMobile:"手机号码格式错误",
+						remote:"推荐人不存在"
+					},
+					qq: {
+						digits: "请输入正确的QQ号码"
+					}, 
+					licensePlate: {
+						isLicensePlate:"车牌号格式不正确"	
+					}
+					
+				},
+				submitHandler : function() {
+					$("#submit_but").attr("disabled","disabled");
+					$.ajax({
+						url : "<@c.url value='/mobile/sign_more_sbmt'/>",
+						dataType : 'json',
+						type : 'post',
+						data : $('#sign_more').serialize(),
+						success : function(data) {
+							if (data.success) {
+								alert("注册成功，等待审核！");
+								//$.mobile.changePage(data.redirect);
+								document.location.href = data.redirect;
+							} else {
+								$("#submit_but").removeAttr("disabled");
+								var msg = data.message;
+								alert(msg);
+							}
+						},
+						error : function() {
+							$("#submit_but").removeAttr("disabled");
+							alert("系统繁忙");
+						}
+					});
+					return false;
+				}
+			});
+			
+			
+		});
+</script>
+
+</body>
+</html>

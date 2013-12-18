@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NDC</title>
+<meta name="layout" content="decorator_default" />
+
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-theme="a" data-role="header">
+        <h3>
+            会员信息
+        </h3>
+    </div>
+	<div data-role="content">
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                手机号
+                <span class="ui-li-aside" >
+                    ${user.mobile}
+                </span>
+            </li>
+            <li data-theme="c">
+                昵称
+                <span class="ui-li-aside">
+                    ${user.nickname}
+                </span>
+            </li>
+            <li data-theme="c">
+                性别
+                <span class="ui-li-aside">
+        			<#if user.gender== 'male'>
+        			男
+        			<#elseif user.gender=='female'>
+        			女
+        			<#else>
+        			保密
+        			</#if>
+                </span>
+            </li>
+            <li data-theme="c">
+                职业
+                <span class="ui-li-aside">
+                    ${user.job}
+                </span>
+            </li>
+            <li data-theme="c">
+                QQ号
+                <span class="ui-li-aside">
+                     ${user.qq}
+                </span>
+            </li>
+            <li data-theme="c">
+                邮箱
+                <span class="ui-li-aside">
+                    ${user.email}
+                </span>
+            </li>
+            <li data-theme="c">
+                驾驶车型
+                <span class="ui-li-aside">
+                    ${user.currentcartype}
+                </span>
+            </li>
+            <li data-theme="c">
+                车牌照
+                <span class="ui-li-aside">
+                    ${user.licensePlate}
+                </span>
+            </li>
+            <li data-theme="c">
+                意向车型
+                <span class="ui-li-aside">
+                    ${user.dreamcartype}
+                </span>
+            </li>
+            <li data-theme="c">
+                推荐人手机
+                <span class="ui-li-aside">
+                    ${user.referee}
+                </span>
+            </li>
+            <li data-theme="c">
+                爱好
+                <span class="ui-li-aside">
+                    ${user.hobby}
+                </span>
+            </li>
+            <li data-theme="c">
+                车标号
+                <span class="ui-li-aside">
+                    ${user.ndcid}
+                </span>
+            </li>
+            <li data-theme="c">
+                会员状态
+                <span class="ui-li-aside">
+                    <#if user.status == "New">
+                    	待审核
+                    <#elseif user.status == "Verified">
+                    	正常
+                    </#if>
+                </span>
+            </li>
+        </ul>
+        <#if user.status == "New">
+        <fieldset class="ui-grid-a" style="margin-top:15px;">
+					<div class="ui-block-a">
+						<a id="Cancle" data-role="button" data-inline="false" 
+							data-direction="reverse" data-transition="slidefade"
+							href="/mobile/index" data-icon="arrow-l" data-iconpos="left">
+							取消 </a>
+					</div>
+					<div id="submit_but" class="ui-block-b">
+						<a id="Modify" data-role="button" data-inline="false" rel="external"
+							data-direction="reverse" data-transition="slidefade"
+							href="/mobile/modify" data-icon="arrow-r" data-iconpos="right">
+							修改 </a>
+					</div>
+				</fieldset>
+       
+		<#else>
+		 <a id="Cancle" data-role="button" data-inline="false" style="margin-top:15px; 
+							data-direction="reverse" data-transition="slidefade" data-theme="a"
+							href="/mobile/index" data-icon="arrow-l" data-iconpos="left">
+							返回 </a>
+		
+		</#if>
+    </div>
+</div>
+
+
+</body>
+</html>

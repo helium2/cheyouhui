@@ -1,0 +1,55 @@
+<#assign c=JspTaglibs["http://java.sun.com/jsp/jstl/core"]/>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/ndc.css" />
+
+<script type="text/javascript">
+	$(document).ajaxComplete(
+  function(event,request,settings){
+	  if(request.getResponseHeader("Ajax-Response-Status")=="session-timeout"){
+		  window.location = request.getResponseHeader("Ajax-Response-Redirect");
+	  }
+  }
+);
+
+function login_callback(){
+	<#if RequestParameters['redirect_url']??>
+		window.location = "${RequestParameters['redirect_url']?url}";
+	<#else>
+		window.location = window.location;
+	</#if>
+}
+</script>
+
+<title><sitemesh:write property="title" /></title>
+<sitemesh:write property="head" />
+</head>
+<body>
+<!--<div data-role="header">
+		<h1>My Title</h1>
+	</div>  -->
+	
+	<!-- /header -->
+
+
+
+
+	<sitemesh:write property="body" />
+<!-- <div data-role="footer">
+		<h4>My Footer</h4>
+	</div> -->
+	
+	<!-- /footer -->
+
+
+	</div>
+</body>
+</html>
